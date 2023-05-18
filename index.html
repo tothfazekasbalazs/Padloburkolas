@@ -16,17 +16,24 @@
         <div id="container">
             <div id="all_buttoms">
                 <div id="first_input">
-                    <form action="">
-                        <label for="first">First:</label>
-                        <input type="text" id="first">
-                        <label for="second">Second:</label>
-                        <input type="text" id="second">
-                        <input type="submit" value="Submit">
-                    </form>
+                    <form>
+                        <input type="text" id="number" value="0"/>
+                        <input type="button" onclick="incrementValue()" value="Increment Value" />
+                     </form>
                 </div>
             </div>
         </div>
         
+        <script>
+            function incrementValue()
+            {
+                let value = parseInt(document.getElementById('number').value);
+                value = isNaN(value) ? 0 : value;
+                value++;
+                document.getElementById('number').value = value;
+            }
+        </script>
+
     </body>
 
 </html>
