@@ -17,20 +17,27 @@
             <div id="all_buttoms">
                 <div id="first_input">
                     <form>
-                        <input type="text" id="number" value="0"/>
-                        <input type="button" onclick="incrementValue()" value="Increment Value" />
-                     </form>
+                        <label for="first">Burkolni kívánt padló hossza: </label><br>
+                        <input type="text" id="numberOne" value="0"/><br>
+                        <label for="second">Burkolni kívánt padló szélessége: </label><br>
+                        <input type="text" id="numberTwo" value="0"/>
+                        <input type="button" onclick="incrementValue()" value="IncrementValue" />
+                        <h1 id="result"></h1>
+                    </form>
                 </div>
             </div>
         </div>
         
         <script>
-            function incrementValue()
-            {
-                let value = parseInt(document.getElementById('number').value);
-                value = isNaN(value) ? 0 : value;
-                value++;
-                document.getElementById('number').value = value;
+            function incrementValue() {
+                let valueOne = parseInt(document.getElementById('numberOne').value);
+                let valueTwo = parseInt(document.getElementById('numberTwo').value);
+                let newValue = valueOne * valueTwo
+                if (newValue === NaN || newValue === 0) {
+                    let result = document.getElementById('result').innerText = `Helytelen érték`;
+                } else {
+                    let result = document.getElementById('result').innerText = `Eredmény: ${newValue}`;
+                }
             }
         </script>
 
