@@ -18,11 +18,11 @@
                 <div id="first_input">
                     <form>
                         <label for="first">Burkolni kívánt padló hossza: </label><br>
-                        <input type="text" id="numberOne" value="0"/><br>
+                        <input type="text" class="inputs" id="numberOne" value="0"/><br>
                         <label for="second">Burkolni kívánt padló szélessége: </label><br>
-                        <input type="text" id="numberTwo" value="0"/>
-                        <input type="button" onclick="incrementValue()" value="IncrementValue" />
-                        <h1 id="result"></h1>
+                        <input type="text" class="inputs" id="numberTwo" value="0"/>
+                        <input type="button" class="button" onclick="incrementValue()" value="IncrementValue" />
+                        <h3 id="result" style="margin-top: 5%; text-align: center;"></h3>
                     </form>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                 if (newValue === NaN || newValue === 0) {
                     let result = document.getElementById('result').innerText = `Helytelen érték`;
                 } else {
-                    let result = document.getElementById('result').innerText = `Eredmény: ${newValue}`;
+                    let result = document.getElementById('result').innerText = `Eredmény: ${newValue}m2`;
                 }
             }
         </script>
