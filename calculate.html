@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="hu">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Számolás</title>
+  </head>
+
+  <body>
+
+
+    <div>
+      <nav class="navbar">
+        <a href="./index.html">Főoldal</a>
+        <a href="#">Számolás</a>
+      </nav>
+    </div>
+
+    <div class="container">
+
+      <div class="chooser-container">
+        <div class="chooser">
+          <h1 class="chooser-title">Válassz Padló Méretet:</h1>
+          <select class="choose-select">
+            <option class="choose-data" value="20x30">20x30</option>
+            <option class="choose-data" value="30x30">30x30</option>
+            <option class="choose-data" value="25x25">25x25</option>
+            <option class="choose-data" value="40x60">40x60</option>
+          </select>
+        </div>
+
+        <div class="chooser">
+          <h1 class="chooser-title">Válassz Padló Fajtát:</h1>
+          <select class="choose-select">
+            <option class="choose-data" value="Vakpadló">Vakpadló</option>
+            <option class="choose-data" value="Lamellaparketta">Lamellaparketta</option>
+            <option class="choose-data" value="Mozaikparketta">Mozaikparketta</option>
+            <option class="choose-data" value="Szalagparketta">Szalagparketta</option>
+          </select>
+        </div>
+      </div>
+
+      <form class="form">
+        <label class="label" for="first">Kívánt Padló Hossza: </label>
+        <input class="input" type="text" id="numberOne" value="" placeholder="0" required/>
+        <label class="label" for="second">Kívánt Padló Szélessége: </label>
+        <input class="input" type="text" id="numberTwo" value="" placeholder="0" required/>
+        <input class="button" type="button" onclick="incrementValue()" value="Számolás" />
+        <h3 id="result" style="margin-top: 5%; font-size: 20px; text-align: center;"></h3>
+      </form>
+    </div>
+
+  <div class="footer">
+    <div class="footer-elements">
+      <h1>Minden jog fenntartva</h1>
+      <h1>Készítette: T.F.B & P.D</h1>
+    </div>
+  </div>
+
+  <script>
+    function incrementValue() {
+      let valueOne = parseInt(document.getElementById('numberOne').value);
+      let valueTwo = parseInt(document.getElementById('numberTwo').value);
+      let newValue = valueOne * valueTwo
+      if (newValue === NaN || newValue === 0) {
+          let result = document.getElementById('result').innerText = `Helytelen érték`;
+      } else {
+          let result = document.getElementById('result').innerText = `Eredmény: ${newValue}m²`;
+      }
+    }
+  </script>
+
+  </body>
+
+</html>

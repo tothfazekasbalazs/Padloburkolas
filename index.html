@@ -13,40 +13,22 @@
 
     <body>
 
-        <h1>Padlók</h1><br>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, modi maxime quos praesentium accusamus officiis iusto porro aperiam adipisci quis, quia dolorem id beatae. Recusandae beatae repellendus quidem sapiente ab.</p>
-        <br>
+        <div>
+            <div>
+                <nav class="navbar">
+                    <a href="#">Főoldal</a>
+                    <a href="./calculate.html">Számolás</a>
+                </nav>
+            </div>
 
-        <div id="container">
-            <div id="all_buttoms">
-                <div id="first_input">
-                    <form>
-                        <label for="first">Burkolni kívánt padló hossza: </label><br>
-                        <input type="text" class="inputs" id="numberOne" value="0"/><br>
-                        <label for="second">Burkolni kívánt padló szélessége: </label><br>
-                        <input type="text" class="inputs" id="numberTwo" value="0"/>
-                        <input type="button" class="button" onclick="incrementValue()" value="Számolás" />
-                        <h3 id="result" style="margin-top: 5%; text-align: center;"></h3>
-                    </form>
+            <div class="footer">
+                <div class="footer-container">
+                    <h1 class="footer-title">Minden jog fenntartva</h1>
+                    <h1 class="footer-createdBy">Készítette: T.F.B & P.D</h1>
                 </div>
             </div>
-        </div>
-        <br><h1>Rólunk</h1><br>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, modi maxime quos praesentium accusamus officiis iusto porro aperiam adipisci quis, quia dolorem id beatae. Recusandae beatae repellendus quidem sapiente ab.</p>
-        <br>
 
-        <script>
-            function incrementValue() {
-                let valueOne = parseInt(document.getElementById('numberOne').value);
-                let valueTwo = parseInt(document.getElementById('numberTwo').value);
-                let newValue = valueOne * valueTwo
-                if (newValue === NaN || newValue === 0) {
-                    let result = document.getElementById('result').innerText = `Helytelen érték`;
-                } else {
-                    let result = document.getElementById('result').innerText = `Eredmény: ${newValue}m²`;
-                }
-            }
-        </script>
+        </div>
 
     </body>
 
